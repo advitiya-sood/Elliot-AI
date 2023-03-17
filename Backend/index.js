@@ -18,7 +18,7 @@ app.get('/', async (req,res)=>{
     res.send("Elliot: HELLO!")
 })
 
-const port=process.env.PORT || 5000
+const port=5000
 
 // Available routes
 app.use("/api/v1/posts", postRoutes)
