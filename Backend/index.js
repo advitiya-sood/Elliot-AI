@@ -18,6 +18,8 @@ app.get('/', async (req,res)=>{
     res.send("Elliot: HELLO!")
 })
 
+const port=process.env.PORT || 5000
+
 // Available routes
 app.use("/api/v1/posts", postRoutes)
 app.use("/api/v1/elliot", EllioRoutes)
@@ -25,6 +27,6 @@ app.use("/api/v1/elliot", EllioRoutes)
 
 connecToDb(process.env.MONGODB_URL);
 
-app.listen(5000,()=>{
-    console.log("The backend server is running")
+app.listen(port,()=>{
+    console.log(`The backend server is running on ${port}`)
 })
