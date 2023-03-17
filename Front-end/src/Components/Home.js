@@ -21,7 +21,7 @@ const [display, setDisplay]=useState(allPosts);
 
 const fetchPost= async ()=>{
   try{
-    const response= await fetch("http://localhost:5000/api/v1/posts",{
+    const response= await fetch("https://elloit-ai.onrender.com/api/v1/posts",{
       method:"GET",
       headers:{
         "Content-Type":"application/json",
