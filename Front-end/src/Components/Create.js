@@ -33,7 +33,7 @@ const handleGenerate= async()=>{
     if(formInfo.promt){
         try{
             setgeneratingImg(true);
-            const response= await fetch("http://localhost:5000/api/v1/elliot",{
+            const response= await fetch("https://elloit-ai.onrender.com/api/v1/elliot",{
                 method:"POST",
                 headers:{
                             "Content-Type":"application/json",
@@ -57,7 +57,7 @@ const handlePost= async()=>{
     if(formInfo.promt && formInfo.image ){
         try{
             setgeneratingImg(true);
-            const response= await fetch("http://localhost:5000/api/v1/posts",{
+            const response= await fetch("https://elloit-ai.onrender.com/api/v1/posts",{
                 method:"POST",
                 headers:{
                             "Content-Type":"application/json",
